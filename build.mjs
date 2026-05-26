@@ -27,7 +27,7 @@ const ADDITIONAL_SHIMS = {
   '@tiptap/pm/state': "const _s=window.__voiden_shims__['@tiptap/pm/state']||{};export default _s;export const {EditorState,Plugin,PluginKey}=_s;",
   '@tiptap/pm/tables': "const _s=window.__voiden_shims__['@tiptap/pm/tables']||{};export default _s;export const {CellSelection}=_s;",
   '@tiptap/pm/view': "const _s=window.__voiden_shims__['@tiptap/pm/view']||{};export default _s;export const {EditorView}=_s;",
-  '@tiptap/suggestion': "const _s=window.__voiden_shims__['@tiptap/suggestion']||{};export default _s;",
+  '@tiptap/suggestion': "const _s=window.__voiden_shims__['@tiptap/suggestion']||{};const _def=_s.default||_s.Suggestion||_s;export default _def;export const Suggestion=_s.Suggestion||_def;",
   'lucide-react': "const _s=window.__voiden_shims__['lucide-react']||{};export default _s;export const {AlertCircle,ArrowDown,ArrowDownLeft,ArrowLeft,ArrowLeftRight,ArrowRight,ArrowUp,ArrowUpRight,BookOpen,Check,CheckCheck,ChevronDown,ChevronRight,ChevronsDownUp,ChevronsUpDown,Circle,CircleAlert,CircleX,Clock,Copy,CornerDownLeft,CornerDownRight,Download,ExternalLink,Eye,FileDown,FileText,Folder,FolderOpen,History,Info,Link,Loader,Loader2,Mouse,Pen,Pencil,Play,Plus,Radio,Rows,Search,SkipForward,Sparkles,Square,Trash2,Unlink,Wifi,WifiOff,WrapText,X,XCircle}=_s;",
   'zustand': "const _s=window.__voiden_shims__['zustand']||{};export default _s;export const {create}=_s;",
   '@faker-js/faker': "const _s=window.__voiden_shims__['@faker-js/faker']||{};export default _s;export const {faker}=_s;",
