@@ -72,6 +72,7 @@ const CORE_EXPORTS = {
 function shimPlugin() {
   return {
     name: 'voiden-shims',
+    enforce: 'pre',
     resolveId(id) {
       if (id in STATIC_SHIMS) return `\0shim:${id}`
       if (id in CORE_EXPORTS) return `\0shim:${id}`
@@ -92,7 +93,8 @@ function shimPlugin() {
     },
     renderChunk(code) {
       const mfStr = JSON.stringify(manifest)
-      return { code: `export const __voiden_bundle_version__=2;\nexport const __voiden_manifest__=${mfStr};\n${code}`, map: null }
+      return { code: `globalThis["__voiden_bundle_version__"]=2;
+export const __voiden_bundle_version__=2;\nexport const __voiden_manifest__=${mfStr};\n${code}`, map: null }
     }
   }
 }
