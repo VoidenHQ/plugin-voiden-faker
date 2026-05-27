@@ -28,4 +28,5 @@ jobs:
           files: |
             dist/voiden-faker.js
             dist/voiden-faker-runner.js
+            src/skill.md
             manifest.json
