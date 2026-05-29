@@ -1,0 +1,50 @@
+[
+  {
+    "version": "v1.1.4",
+    "date": "29/05/2026",
+    "title": "Changelog & Housekeeping",
+    "changes": {
+      "Added": [
+        "Release changelog history tracking"
+      ]
+    }
+  },
+  {
+    "version": "v1.1.1",
+    "date": "27/05/2026",
+    "title": "Bundle Fix",
+    "changes": {
+      "Fixed": [
+        "Removed catch-all shim so @faker-js/faker bundles inline correctly \u2014 fixes CI build failure"
+      ]
+    }
+  },
+  {
+    "version": "v1.1.0",
+    "date": "20/04/2026",
+    "title": "Extended Faker Categories",
+    "changes": {
+      "Added": [
+        "Commerce, finance, and internet faker categories",
+        "Locale-aware data generation",
+        "Seed support for reproducible fake data"
+      ],
+      "Improved": [
+        "Slash command autocomplete now shows category previews"
+      ]
+    }
+  },
+  {
+    "version": "v1.0.0",
+    "date": "01/04/2026",
+    "title": "Initial Release",
+    "description": "Faker.js integration for generating realistic test data inside Voiden documents.",
+    "changes": {
+      "Added": [
+        "Slash commands to insert fake names, emails, addresses, phone numbers",
+        "Dynamic variable generation at request send time",
+        "Support for all major faker.js locales"
+      ]
+    }
+  }
+]
