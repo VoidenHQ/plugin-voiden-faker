@@ -47,7 +47,7 @@ export const FAKER_FUNCTIONS: FakerFunction[] = [
 
   // Internet
   { path: 'internet.email', description: 'Random email address', example: 'john@example.com', category: 'Internet' },
-  { path: 'internet.userName', description: 'Random username', example: 'john_doe', category: 'Internet' },
+  { path: 'internet.username', description: 'Random username', example: 'john_doe', category: 'Internet' },
   { path: 'internet.password', description: 'Random password', example: 'aB3$xY9!', category: 'Internet', argsTemplate: '{ length: 16, memorable: false }', paramsSummary: 'length:number, memorable:boolean, pattern:RegExp, prefix:string', paramsType: 'object', paramsCount: 1, sourceUrl: 'https://fakerjs.dev/api/internet#password' },
   { path: 'internet.url', description: 'Random URL', example: 'https://example.com', category: 'Internet' },
   { path: 'internet.domainName', description: 'Random domain', example: 'example.com', category: 'Internet' },

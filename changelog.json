@@ -1,5 +1,16 @@
 [
   {
+    "version": "v1.1.1",
+    "date": "24/08/2026",
+    "title": "Fixed: internet.username Was Broken (Typo'd as userName)",
+    "changes": {
+      "Fixed": [
+        "Fixed internet.userName being registered in the faker function catalog and shown in skill.md — Faker.js renamed this method to internet.username (lowercase n) in v8, and this plugin depends on @faker-js/faker ^10.4.0, where internet.userName no longer exists at all. Using {{$faker.internet.userName()}} silently failed and left the literal unresolved placeholder text in the request instead of throwing or generating a value, since executeFakerFunction catches the missing-property error and falls back to returning the original expression unchanged. Verified the fix against the real installed library: all 46 catalog entries now resolve to an actual function, up from 45/46 before.",
+        "Fixed stale 2-column headers-table/query-table examples in skill.md (Key, Value only) — these table types moved to 3 columns (Key, Value, Description) a while back; see the same fix already shipped in plugin-voiden-rest-api's skill.md."
+      ]
+    }
+  },
+  {
     "version": "v1.1.4",
     "date": "29/05/2026",
     "title": "Changelog & Housekeeping",
@@ -15,7 +26,7 @@
     "title": "Bundle Fix",
     "changes": {
       "Fixed": [
-        "Removed catch-all shim so @faker-js/faker bundles inline correctly \u2014 fixes CI build failure"
+        "Removed catch-all shim so @faker-js/faker bundles inline correctly — fixes CI build failure"
       ]
     }
   },

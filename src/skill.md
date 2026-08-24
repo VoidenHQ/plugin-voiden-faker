@@ -18,7 +18,7 @@ Provides `{{$faker.*()}}` syntax for generating fake/random data inline in any b
 {{$faker.person.lastName()}}           → "Doe"
 {{$faker.person.fullName()}}           → "John Doe"
 {{$faker.internet.email()}}            → "john.doe@example.com"
-{{$faker.internet.userName()}}         → "john_doe42"
+{{$faker.internet.username()}}         → "john_doe42"
 {{$faker.internet.password()}}         → "xK9#mP2!qR"
 ```
 
@@ -90,16 +90,16 @@ attrs:
 ---
 ```
 
-In a headers-table:
+In a headers-table (3-element rows — Key, Value, Description — see the voiden-rest-api skill's "Key/Value/Description Tables" note):
 
 ```yaml
 content:
   - type: table
     rows:
       - attrs: { disabled: false }
-        row: [X-Request-ID, "{{$faker.string.uuid()}}"]
+        row: [X-Request-ID, "{{$faker.string.uuid()}}", ""]
       - attrs: { disabled: false }
-        row: [X-Correlation-ID, "{{$faker.string.uuid()}}"]
+        row: [X-Correlation-ID, "{{$faker.string.uuid()}}", ""]
 ```
 
 In a query-table:
@@ -109,5 +109,5 @@ content:
   - type: table
     rows:
       - attrs: { disabled: false }
-        row: [search, "{{$faker.commerce.productName()}}"]
+        row: [search, "{{$faker.commerce.productName()}}", ""]
 ```
